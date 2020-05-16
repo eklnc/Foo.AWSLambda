@@ -21,6 +21,8 @@ namespace Foo.AWSLambda
         /// <returns></returns>
         public string FunctionHandler(string input, ILambdaContext context)
         {
+            LambdaLogger.Log($"Incoming input is: {input}");
+
             return input switch
             {
                 "Hello" => "Hello World",
